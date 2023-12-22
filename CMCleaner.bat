@@ -9,7 +9,8 @@ if %errorLevel% neq 0 (
     exit /b
 )
 
-set "folders=C:\Users\user\.cmclient;C:\Users\user\AppData\Local\Temp;C:\Windows\Temp;C:\Users\user\AppData\Roaming\.minecraft\assets;C:\Users\user\AppData\Roaming\.minecraft\libraries;C:\Users\user\AppData\Roaming\.minecraft\logs"
+set "currentUser=%username%"
+set "folders=C:\Users\%currentUser%\.cmclient;C:\Users\%currentUser%\AppData\Local\Temp;C:\Windows\Temp;C:\Users\%currentUser%\AppData\Roaming\.minecraft\assets;C:\Users\%currentUser%\AppData\Roaming\.minecraft\libraries;C:\Users\%currentUser%\AppData\Roaming\.minecraft\logs"
 
 for %%i in (%folders%) do (
     echo Cleaning %%i
